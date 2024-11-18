@@ -10,8 +10,8 @@ let mailUtentePresente = false
 let tentativiMassimi = 0
 
 while (mailUtentePresente == false){
-    mailUtente = prompt("Inserisci la tua mail");
-    if (typeof mailUtente === 'string' && mail.includes(mailUtente)){
+    mailUtente = prompt("Inserisci la tua mail"); 
+    if (mail.includes(mailUtente)){
         mailUtentePresente = true
         console.log ("Accesso consentito")
     } else {
