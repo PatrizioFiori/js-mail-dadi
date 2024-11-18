@@ -4,6 +4,37 @@ Creo un'array con varie mail che possono accedere. Tramite una if all'interno di
 */
 
 
+
+/* VERSIONE CON FOR */
+
+let mail = ["mario@gmail.com", "marco@gmail.com", "luca@gmail.com", "paolo@gmail.com" , "matteo@gmail.com"];
+let mailUtente = "";
+let mailUtentePresente = false
+let tentativiMassimi = 0
+
+while (tentativiMassimi < 5 && !mailUtentePresente) {
+    mailUtente = prompt("Inserisci la tua @gmail.com valida");
+        for (let i = 0; i < mail.length; i++) {
+            if (mail[i] === mailUtente) {
+                console.log("Accesso consentito");
+                mailUtentePresente = true;
+                break; 
+            }
+        }
+        if (!mailUtentePresente) {
+            console.log("Accesso vietato!");
+            tentativiMassimi++;
+        }
+    }
+
+    if (tentativiMassimi == 5) {
+        console.log("Tentativi d'accesso esauriti");
+    }
+
+
+
+/* VERSIONE CON INCLUDES */
+/* 
 let mail = ["mario@gmail.com", "marco@gmail.com", "luca@gmail.com", "paolo@gmail.com" , "matteo@gmail.com"];
 let mailUtente = "";
 let mailUtentePresente = false
@@ -26,25 +57,13 @@ while (tentativiMassimi < 5 && !mailUtentePresente){
     if (tentativiMassimi == 5) {console.log("Tentativi d'accesso esauriti");
     }
 }
-
-/* VERSIONE-OLD
-while (mailUtentePresente == false){
-    mailUtente = prompt("Inserisci la tua mail"); 
-    if (mail.includes(mailUtente)){
-        mailUtentePresente = true
-        console.log ("Accesso consentito")
-    } else {
-        console.log("Accesso non consentito");
-        tentativiMassimi++
-        if(tentativiMassimi == 5) {
-            console.log("Tentativi d'accesso eseuriti!");
-            break
-            
-        }
-    }
-} */
+*/
 
 
+
+
+
+/* -------------------------------------------------------------- */
 
 /*
 Dadi:
@@ -61,4 +80,3 @@ if (dadiLanciatiDalGiocatore > dadiLanciatiDalPc) {
 } else {
     console.log (`Il giocatore ha rollato ${dadiLanciatiDalGiocatore} e il pc ha rollato ${dadiLanciatiDalPc} ottenendo quindi lo stesso risultato`)
 }
-
