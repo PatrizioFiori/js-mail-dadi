@@ -18,7 +18,7 @@ while (mailUtentePresente == false){
         console.log("Accesso non consentito");
         tentativiMassimi++
         if(tentativiMassimi == 5) {
-            console.log("Tentativi d'accesso falliti!");
+            console.log("Tentativi d'accesso eseuriti!");
             break
             
         }
@@ -33,9 +33,7 @@ Viene generato randomicamente un numero da 1 a 6 (senza virgola) e ne viene inse
 
 let dadiLanciatiDalPc = Math.floor(Math.random() * 6) + 1;
 let dadiLanciatiDalGiocatore = Math.floor(Math.random()* 6 ) +1;
-let stessoRisultato = false
 
-while (not)
 if (dadiLanciatiDalGiocatore > dadiLanciatiDalPc) {
     console.log (`vince il giocatore con ${dadiLanciatiDalGiocatore} contro ${dadiLanciatiDalPc} del pc`)
 } else if ( dadiLanciatiDalPc > dadiLanciatiDalGiocatore){
